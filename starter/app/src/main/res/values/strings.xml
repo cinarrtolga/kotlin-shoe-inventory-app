@@ -8,4 +8,8 @@
     <string name="welcome_text">Welcome to Shoe Store Inventory App!</string>
     <string name="welcome_description">All Brands Together</string>
     <string name="contine_text">Continue</string>
+    <string name="easyaccess_image_text">Easy to Access!</string>
+    <string name="introduction_header_text">Easy to Access!</string>
+    <string name="introduction_description_test">Everything is as close as 1 click</string>
+    <string name="findshoe_button_text">Find Shoe</string>
 </resources>
