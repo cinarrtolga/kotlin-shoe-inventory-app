@@ -5,4 +5,7 @@
     <string name="app_logo_description">Shoe Store Inventory App</string>
     <string name="login_button_text">Sign In</string>
     <string name="register_button_text">Sign Up</string>
+    <string name="welcome_text">Welcome to Shoe Store Inventory App!</string>
+    <string name="welcome_description">All Brands Together</string>
+    <string name="contine_text">Continue</string>
 </resources>
