@@ -16,4 +16,31 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="loginMailField">
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:textColor">@color/cardview_light_background</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textColorHint">@color/cardview_light_background</item>
+    </style>
+
+    <style name="loginPasswordField">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textColor">@color/cardview_light_background</item>
+    </style>
+
+    <style name="loginPageButton">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/button_bg</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textColor">@color/cardview_light_background</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>
