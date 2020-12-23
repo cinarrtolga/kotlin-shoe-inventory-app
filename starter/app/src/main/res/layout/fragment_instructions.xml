@@ -22,7 +22,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        tools:src="@drawable/easy_icon" />
+        tools:src="@drawable/easy_icon"
+        android:src="@drawable/easy_icon"/>
 
     <TextView
         android:id="@+id/introduction_header_text"

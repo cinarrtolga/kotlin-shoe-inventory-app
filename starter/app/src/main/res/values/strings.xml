@@ -12,4 +12,14 @@
     <string name="introduction_header_text">Easy to Access!</string>
     <string name="introduction_description_test">Everything is as close as 1 click</string>
     <string name="findshoe_button_text">Find Shoe</string>
+    <string name="shoe_list_header">Shoe List</string>
+    <string name="product_sample_image_description">Sample product image.</string>
+    <string name="sample_product_name">ABC Product</string>
+    <string name="sample_company_name">ABC Company</string>
+    <string name="sample_product_description">Lorem Ipsum</string>
+    <string name="see_more_button_description">See more</string>
+    <string name="login_page_title">Login</string>
+    <string name="welcome_page_title">Welcome!</string>
+    <string name="instructions_page_title">Instructions</string>
+    <string name="sholist_page_title">Shoe List</string>
 </resources>
