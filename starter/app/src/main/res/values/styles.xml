@@ -67,4 +67,10 @@
         <item name="android:textColor">#ffffff</item>
         <item name="android:textAlignment">center</item>
     </style>
+
+    <style name="itemAreaStyle">
+        <item name="android:background">@drawable/bgdark_radius</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">8dp</item>
+    </style>
 </resources>
