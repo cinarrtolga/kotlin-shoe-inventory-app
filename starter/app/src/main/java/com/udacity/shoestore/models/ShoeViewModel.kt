@@ -22,12 +22,7 @@ class ShoeViewModel : ViewModel() {
     }
 
     fun addNewShoe() {
-        Timber.i("Current Count: " + _shoeList.value?.size.toString())
-
         _shoeList.value?.add(newShoe)
-
-        Timber.i("Current Count: " + _shoeList.value?.size.toString())
-
         _isRedirected.value = true
     }
 

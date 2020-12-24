@@ -30,7 +30,7 @@ class DetailFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail, container, false)
 
-        viewModel = ViewModelProvider(this).get(ShoeViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
         binding.shoeViewModel = viewModel
 
         viewModel.isRedirect.observe(viewLifecycleOwner, Observer { isCompleted ->
