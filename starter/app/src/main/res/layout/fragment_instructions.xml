@@ -16,7 +16,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="@string/easyaccess_image_text"
-        app:layout_constraintBottom_toTopOf="@+id/introduction_header_text"
+        app:layout_constraintBottom_toTopOf="@+id/introduction_title_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
         android:src="@drawable/easy_icon"/>
 
     <TextView
-        android:id="@+id/introduction_header_text"
+        android:id="@+id/introduction_title_text"
         style="@style/generalTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/introduction_header_text" />
+        app:layout_constraintTop_toBottomOf="@+id/introduction_title_text" />
 
     <Button
         android:id="@+id/findShoe_btn"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_background"
-    android:label="Login Page"
+    android:label="@string/login_page_title"
     tools:context=".screens.login.LoginFragment">
 
     <ImageView
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_logo_description"
         android:src="@drawable/app_logo"
-        app:layout_constraintBottom_toTopOf="@+id/email_edit"
+        app:layout_constraintBottom_toTopOf="@+id/login_email_edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,30 +23,33 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
-        android:id="@+id/email_edit"
+        android:id="@+id/login_email_edit"
         style="@style/loginMailField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/cardview_light_background"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/password_edit"
+        android:hint="@string/username_edit"
+        android:text="@string/username_edit"
+        android:autofillHints="false"
+        app:layout_constraintBottom_toTopOf="@+id/login_password_edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/applogo_image" />
 
     <EditText
-        android:id="@+id/password_edit"
+        android:id="@+id/login_password_edit"
         style="@style/loginPasswordField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints="false"
         android:backgroundTint="@color/cardview_light_background"
-        android:text="Name"
+        android:text="@string/password_edit"
         app:layout_constraintBottom_toTopOf="@+id/login_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_edit" />
+        app:layout_constraintTop_toBottomOf="@+id/login_email_edit" />
 
 
     <Button
@@ -57,10 +60,10 @@
         android:layout_marginTop="24dp"
         android:text="@string/login_button_text"
         app:layout_constraintBottom_toTopOf="@+id/register_btn"
-        app:layout_constraintEnd_toEndOf="@+id/password_edit"
+        app:layout_constraintEnd_toEndOf="@+id/login_password_edit"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/password_edit"
-        app:layout_constraintTop_toBottomOf="@+id/password_edit" />
+        app:layout_constraintStart_toStartOf="@+id/login_password_edit"
+        app:layout_constraintTop_toBottomOf="@+id/login_password_edit" />
 
     <Button
         android:id="@+id/register_btn"

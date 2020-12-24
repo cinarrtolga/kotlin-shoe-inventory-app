@@ -22,4 +22,17 @@
     <string name="welcome_page_title">Welcome!</string>
     <string name="instructions_page_title">Instructions</string>
     <string name="sholist_page_title">Shoe List</string>
+    <string name="new_shoe_name_text">Shoe Name</string>
+    <string name="new_shoe_name_variable_text">Shoe Name</string>
+    <string name="txt_shoe_company">Company</string>
+    <string name="new_shoe_company_name_text">Company</string>
+    <string name="shoe_size_text">Shoe Size</string>
+    <string name="new_shoe_size_text">Shoe Size</string>
+    <string name="new_shoe_description_label_text">Description</string>
+    <string name="new_shoe_description_text">Description</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="save_text">Save</string>
+    <string name="new_shoe">New Shoe</string>
+    <string name="username_edit">Username</string>
+    <string name="password_edit">Password</string>
 </resources>
