@@ -6,6 +6,9 @@
         <variable
             name="shoeViewModel"
             type="com.udacity.shoestore.models.ShoeViewModel" />
+        <variable
+            name="shoeObj"
+            type="com.udacity.shoestore.models.Shoe" />
     </data>
 
 <LinearLayout
@@ -37,7 +40,8 @@
             android:autofillHints=""
             android:inputType="text"
             android:hint="@string/new_shoe_name_text"
-            android:text="@{shoeViewModel.newShoe.name}" />
+            android:text="@={shoeObj.name}"
+            android:importantForAutofill="no" />
 
         <TextView
             android:id="@+id/shoe_company_label"
@@ -54,9 +58,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/shoe_name_text"
             android:layout_toEndOf="@id/shoe_company_label"
+            android:autofillHints=""
             android:inputType="text"
             android:hint="@string/new_shoe_company_name_text"
-            android:text="@{shoeViewModel.newShoe.company}"
+            android:text="@={shoeObj.company}"
             android:importantForAutofill="no" />
 
         <TextView
@@ -76,7 +81,7 @@
             android:ems="10"
             android:inputType="numberDecimal"
             android:hint="@string/new_shoe_size_text"
-            android:text="@string/new_shoe_description_text"
+            android:text="@string/new_shoe_size_text"
             android:importantForAutofill="no" />
 
         <TextView
@@ -96,9 +101,17 @@
             android:ems="10"
             android:inputType="text"
             android:hint="@string/new_shoe_description_text"
-            android:text="@{shoeViewModel.newShoe.description}"
+            android:text="@={shoeObj.description}"
             android:importantForAutofill="no" />
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/addnew_button"
+        style="@style/appButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> shoeViewModel.addNewShoe(shoeObj)}"
+        android:text="@string/save_text" />
 
     <Button
         android:id="@+id/cancel_btn"
@@ -107,12 +120,5 @@
         android:layout_height="wrap_content"
         android:text="@string/cancel_text" />
 
-    <Button
-        android:id="@+id/addnew_button"
-        style="@style/appButton"
-        android:onClick="@{() -> shoeViewModel.addNewShoe()}"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/save_text" />
 </LinearLayout>
 </layout>

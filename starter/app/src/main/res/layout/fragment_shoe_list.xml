@@ -36,62 +36,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/item_layout"
-                style="@style/itemAreaStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp">
-
-                <ImageView
-                    android:id="@+id/sample_content_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="8dp"
-                    android:contentDescription="@string/product_sample_image_description"
-                    android:src="@drawable/app_logo" />
-
-                <LinearLayout
-                    android:id="@+id/item_detail_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/product_name_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_bold"
-                        android:text="@string/sample_product_name"
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/product_company_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/sample_company_name"
-                        android:textColor="@android:color/white" />
-
-                    <TextView
-                        android:id="@+id/product_description_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/roboto_thin"
-                        android:text="@string/sample_product_description"
-                        android:textColor="@android:color/white" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
         </LinearLayout>
 
     </ScrollView>

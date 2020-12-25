@@ -32,6 +32,8 @@ class DetailFragment : Fragment() {
 
         viewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
         binding.shoeViewModel = viewModel
+        binding.lifecycleOwner = this
+        binding.shoeObj = Shoe("", 0.0, "", "", emptyList())
 
         viewModel.isRedirect.observe(viewLifecycleOwner, Observer { isCompleted ->
             if (isCompleted){

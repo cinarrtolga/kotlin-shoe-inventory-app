@@ -14,15 +14,13 @@ class ShoeViewModel : ViewModel() {
     val isRedirect: LiveData<Boolean>
     get() = _isRedirected
 
-    val newShoe = Shoe("", 0.0, "", "", emptyList())
-
     init {
         _isRedirected.value = false
         _shoeList.value = ArrayList()
     }
 
-    fun addNewShoe() {
-        _shoeList.value?.add(newShoe)
+    fun addNewShoe(shoe: Shoe) {
+        _shoeList.value?.add(shoe)
         _isRedirected.value = true
     }
 
