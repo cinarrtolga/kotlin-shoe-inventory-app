@@ -1,15 +1,15 @@
 package com.udacity.shoestore.screens.detail
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentDetailBinding
 import com.udacity.shoestore.models.Shoe
@@ -32,7 +32,6 @@ class DetailFragment : Fragment() {
 
         viewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
         binding.shoeViewModel = viewModel
-        binding.lifecycleOwner = this
         binding.shoeObj = Shoe("", 0.0, "", "", emptyList())
 
         viewModel.isRedirect.observe(viewLifecycleOwner, Observer { isCompleted ->
@@ -42,11 +41,10 @@ class DetailFragment : Fragment() {
             }
         })
 
-        binding.cancelBtn.setOnClickListener {
+        binding.cancelButton.setOnClickListener {
             findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToShoeListFragment())
         }
 
-        // Inflate the layout for this fragment
         return binding.root
     }
 }

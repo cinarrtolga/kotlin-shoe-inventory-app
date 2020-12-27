@@ -1,15 +1,16 @@
 package com.udacity.shoestore.screens.login
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.MainActivity
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
+import timber.log.Timber
 
 class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
@@ -25,15 +26,14 @@ class LoginFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
-        binding.loginBtn.setOnClickListener {
+        binding.loginButton.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
 
-        binding.registerBtn.setOnClickListener {
+        binding.registerButton.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
 
-        // Inflate the layout for this fragment
         return binding.root
     }
 }

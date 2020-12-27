@@ -2,9 +2,7 @@ package com.udacity.shoestore.screens.shoelist
 
 import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.marginBottom
@@ -12,7 +10,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.models.ShoeViewModel
@@ -34,9 +34,9 @@ class ShoeListFragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        setHasOptionsMenu(true)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
         viewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
-        binding.shoeViewModel = viewModel
 
         itemListLinearLayout = binding.itemListLayout
 
@@ -51,11 +51,20 @@ class ShoeListFragment : Fragment() {
             }
         })
 
-        binding.detailBtn.setOnClickListener {
+        binding.detailButton.setOnClickListener {
             findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToDetailFragment())
         }
 
-        // Inflate the layout for this fragment
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+                || super.onOptionsItemSelected(item)
     }
 }

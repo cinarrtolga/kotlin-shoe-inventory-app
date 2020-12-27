@@ -35,4 +35,5 @@
     <string name="new_shoe">New Shoe</string>
     <string name="username_edit">Username</string>
     <string name="password_edit">Password</string>
+    <string name="menu_logout_text">Logout</string>
 </resources>
