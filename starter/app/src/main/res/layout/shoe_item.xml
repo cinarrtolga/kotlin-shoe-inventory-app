@@ -7,6 +7,12 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!--
+       Here, I used just linear layouts but vertical and horizontal together. Why? Because of
+       attributes. Images are next to product properties. And product properties should be like a
+       list. Because of that, I need a new linear layout as a vertical oriented.
+    -->
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

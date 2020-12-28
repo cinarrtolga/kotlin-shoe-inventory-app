@@ -11,6 +11,12 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!--
+        In this page I used a linear layout because this is a form page and all contents will be sorted
+        as a vertical. In layout, I used Relative layout. I saw this in the Palette. I use this
+        layout for vertical alignment.
+    -->
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
