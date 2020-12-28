@@ -2,14 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!--
         I used a constraint layout on login page and on boarding pages because I wanted to design as
         responsive those screens as responsive and contents are centered and related to each other
         or they are related with screen borders. It was easy to design my pages with drag and drop.
         I aligned everything quickly.
     -->
-
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/login_layout"
     android:layout_width="match_parent"

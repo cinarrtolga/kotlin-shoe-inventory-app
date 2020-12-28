@@ -1,11 +1,9 @@
 package com.udacity.shoestore.screens.shoelist
 
-import android.content.Context
 import android.os.Bundle
 import android.view.*
 import android.widget.LinearLayout
-import androidx.core.content.ContextCompat
-import androidx.core.view.marginBottom
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -16,9 +14,7 @@ import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.models.ShoeViewModel
-import kotlinx.android.synthetic.main.fragment_detail.view.*
 import kotlinx.android.synthetic.main.shoe_item.view.*
-import timber.log.Timber
 
 
 class ShoeListFragment : Fragment() {
@@ -47,7 +43,12 @@ class ShoeListFragment : Fragment() {
                 rowView.product_name_text.text = shoe.name
                 rowView.product_company_text.text = shoe.company
                 rowView.product_description_text.text = shoe.description
-                itemListLinearLayout!!.addView(rowView, itemListLinearLayout!!.childCount - 1)
+
+                val layoutParams = ConstraintLayout.LayoutParams(
+                        ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.WRAP_CONTENT)
+                layoutParams.setMargins(0, 0, 0, 30)
+
+                itemListLinearLayout!!.addView(rowView, itemListLinearLayout!!.childCount - 1, layoutParams)
             }
         })
 

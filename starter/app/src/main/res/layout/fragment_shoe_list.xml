@@ -3,7 +3,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!--
         Here, I used constraint layout and linear layout together. With constraint layout, I created
         component limits in my page. I defined their positions as responsive. I used a linear layout
@@ -11,7 +10,6 @@
         Because of that, I preferred Linearlayout. All items will be listed as a vertical because of
         that I defined the orientation attribute as a vertical.
     -->
-
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/shoelist_layout"
     android:layout_width="match_parent"
@@ -38,9 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
         </LinearLayout>
-
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -55,6 +51,5 @@
         app:backgroundTint="#1190cb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

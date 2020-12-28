@@ -70,7 +70,6 @@
 
     <style name="itemAreaStyle">
         <item name="android:background">@drawable/bgdark_radius</item>
-        <item name="android:orientation">horizontal</item>
         <item name="android:padding">8dp</item>
         <item name="android:layout_marginTop">8dp</item>
     </style>

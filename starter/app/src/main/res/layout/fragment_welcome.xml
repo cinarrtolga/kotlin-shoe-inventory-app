@@ -2,64 +2,66 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/welcome_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/content_background"
-    tools:context=".screens.welcome.WelcomeFragment">
+    <!--
+        I used constraint layout in this page because I wanted to design responsive page. Contents
+        will be same on every resolution.
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcome_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/content_background"
+        tools:context=".screens.welcome.WelcomeFragment">
 
+        <ImageView
+            android:id="@+id/welcome_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/app_logo_description"
+            android:src="@drawable/phone_sample"
+            app:layout_constraintBottom_toTopOf="@+id/welcome_title_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:id="@+id/welcome_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/app_logo_description"
-        android:src="@drawable/phone_sample"
-        app:layout_constraintBottom_toTopOf="@+id/welcome_title_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        <TextView
+            android:id="@+id/welcome_title_text"
+            style="@style/generalTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_text"
+            app:layout_constraintBottom_toTopOf="@+id/welcome_description_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_image"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-    <TextView
-        android:id="@+id/welcome_title_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_text"
-        app:layout_constraintBottom_toTopOf="@+id/welcome_description_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_image"
-        app:layout_constraintVertical_chainStyle="packed"
-        style="@style/generalTitle" />
+        <TextView
+            android:id="@+id/welcome_description_text"
+            style="@style/generalDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_description"
+            app:layout_constraintBottom_toTopOf="@+id/continue_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_title_text" />
 
-    <TextView
-        android:id="@+id/welcome_description_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_description"
-        app:layout_constraintBottom_toTopOf="@+id/continue_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_title_text"
-        style="@style/generalDescription" />
+        <Button
+            android:id="@+id/continue_button"
+            style="@style/appButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="@string/contine_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/continue_button"
-        style="@style/appButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="@string/contine_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

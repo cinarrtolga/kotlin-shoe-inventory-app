@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_layout">
-    <data>
-        <variable
-            name="shoeObj"
-            type="com.udacity.shoestore.models.Shoe" />
-    </data>
-
     <!--
-       Here, I used just linear layouts but vertical and horizontal together. Why? Because of
-       attributes. Images are next to product properties. And product properties should be like a
-       list. Because of that, I need a new linear layout as a vertical oriented.
+       I converted layouts to Constraint layout for align views. Before I tried to align all of the views
+        manually by myself. Now, I did it with constraints and chains. Also I removed width and height
+        properties for Constraint layout. I assigned them to a kotlin file. (ShoeListFragment.kt)
     -->
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <LinearLayout
-        style="@style/itemAreaStyle"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/itemAreaStyle">
 
         <ImageView
             android:id="@+id/sample_content_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
-            android:contentDescription="@string/product_sample_image_description"
-            android:src="@drawable/app_logo" />
-
-        <LinearLayout
-            android:id="@+id/item_detail_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical">
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/product_sample_image_description"
+            android:src="@drawable/app_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/product_name_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
-                android:text="@string/sample_product_name"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/product_company_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/roboto"
-                android:text="@string/sample_company_name"
-                android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/product_name_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/sample_product_name"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/product_company_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toEndOf="@+id/sample_content_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-            <TextView
-                android:id="@+id/product_description_text"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/roboto_thin"
-                android:text="@string/sample_product_description"
-                android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/product_company_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/sample_company_name"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/product_description_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sample_content_image"
+            app:layout_constraintTop_toBottomOf="@+id/product_name_text" />
 
-        </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+        <TextView
+            android:id="@+id/product_description_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/sample_product_description"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sample_content_image"
+            app:layout_constraintTop_toBottomOf="@+id/product_company_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
